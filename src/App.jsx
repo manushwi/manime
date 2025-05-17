@@ -12,22 +12,40 @@ function App() {
       ease: 'power4.easeInOut',
       transformOrigin: "50% 50%"
     })
-    .to('.vi-mask-group', {
-      scale: 10,
-      duration: 2,
-      ease: 'expo.easeInOut',
-      transformOrigin: '50% 50%',
-      delay: -1.8,
-      opacity: 0,
-      onUpdate: function() {
-        if(this.progress() >= 0.99) {
-          document.querySelector('.svg').remove();
-          setShowContent(true);
-          this.kill();
+      .to('.vi-mask-group', {
+        scale: 10,
+        duration: 2,
+        ease: 'expo.easeInOut',
+        transformOrigin: '50% 50%',
+        delay: -1.8,
+        opacity: 0,
+        onUpdate: function () {
+          if (this.progress() >= 0.99) {
+            document.querySelector('.svg').remove();
+            setShowContent(true);
+            this.kill();
+          }
         }
-      }
-    })
-  }, [])
+      })
+  });
+
+  useGSAP(() => {
+    const main = document.querySelector('.main');
+
+    main?.addEventListener('mousemove', function (e) {
+      const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
+      gsap.to(".imagesdiv .text", {
+        x: -xMove * 0.4,
+      });
+      gsap.to(".sky", {
+        x: xMove,
+      });
+      gsap.to(".bg", {
+        x: xMove * 2,
+      });
+    });
+  }, [showContent]);
+
   return (
     <>
       <div className="svg flex items-center justify-center fixed top-0 left-0 z-[100] w-full h-screen overflow-hidden bg-[#000]">
@@ -60,7 +78,7 @@ function App() {
         </svg>
       </div>
       {showContent && (<div className="main w-full">
-        <div className='landing w-full h-screen bg-black'>
+        <div className='landing w-full h-screen bg-black font-Pricedown'>
           <div className='navbar absolute top-0 left-0 z-[10] w-full py-10 px-10'>
             <div className='logo flex gap-7 '>
               <div className='line flex flex-col gap-1'>
@@ -72,30 +90,43 @@ function App() {
             </div>
           </div>
           <div className='imagesdiv relative overflow-hidden w-full h-screen'>
-            <img className='absolute top-0 left-0 w-full h-full object-cover'  src="./sky.png" alt="" />
-            <img className='absolute top-0 left-0 w-full h-full object-cover' src="./bg.png" alt="" />
-            <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] font-glitch">
-                <h1 className="text-[6rem] leading-none -ml-40">manu</h1>
-                <h1 className="text-[6rem] leading-none ml-30">shwi</h1>
-                <h1 className="text-[6rem] leading-none -ml-40">anime</h1>
-              </div>
-            <img className='absolute bottom-[-95%] left-1/2 -translate-x-1/2 scale-[0.5]' src="./luffy.png" alt="" />
+            <img className='absolute sky top-0 left-0 w-full h-full object-cover' src="./sky.png" alt="" />
+            <img className='absolute scale-[1.1] bg top-0 left-0 w-full h-full object-cover' src="./bg.png" alt="" />
+            <div className="text text-white  flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4]">
+              <h1 className="text-[6rem] leading-none -ml-40">manu</h1>
+              <h1 className="text-[6rem] leading-none ml-30">shwi</h1>
+              <h1 className="text-[6rem] leading-none -ml-40">anime</h1>
+            </div>
+            <img className='absolute luffy bottom-[-95%] left-1/2 -translate-x-1/2 scale-[0.5]' src="./luffy.png" alt="" />
           </div>
           <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
-              <div className="flex justify-between items-center w-full">
-                <div className="flex gap-4 items-center">
-                  <i className="text-3xl ri-arrow-down-line"></i>
-                  <h3 className="text-xl font-[Helvetica_Now_Display]">
-                    Scroll Down
-                  </h3>
-                </div>
-                <img
-                  className="h-[55px]"
-                  src="./netflix.png"
-                  alt=""
-                />
+            <div className="flex justify-between items-center w-full">
+              <div 
+                className="flex gap-4 items-center cursor-pointer" 
+                onClick={() => {
+                  window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: 'smooth',
+                  });
+                }}
+              >
+                <i className="text-3xl ri-arrow-down-line"></i>
+                <h3 className="text-xl font-[Helvetica_Now_Display]">
+                  Scroll Down
+                </h3>
               </div>
+              <img
+                className="h-[55px]"
+                src="./netflix.png"
+                alt=""
+              />
             </div>
+          </div>
+        </div>
+        <div className='w-full h-screen bg-black'>
+          <button className="text-white px-8 py-3 bg-red-600 rounded-lg hover:bg-red-700 transition-colors font-[Helvetica_Now_Display]">
+            Watch Now
+          </button>
         </div>
       </div>)}
     </>
