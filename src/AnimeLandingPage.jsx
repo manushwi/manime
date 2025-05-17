@@ -203,7 +203,7 @@ function AnimeLandingPage() {
                                     minima sit? Explicabo voluptates reiciendis adipisci earum perferendis perspiciatis blanditiis.
                                 </p>
 
-                                <button className="bg-yellow-500 hover:bg-yellow-600 px-8 py-3 w-full text-black font-bold uppercase tracking-widest text-lg transition-colors duration-300">
+                                <button onClick={() => window.location.href='/home'} className="bg-yellow-500 hover:bg-yellow-600 px-8 py-3 w-full text-black font-bold uppercase tracking-widest text-lg transition-colors duration-300">
                                     Watch Now
                                 </button>
                             </div>
