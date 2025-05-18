@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaPlay, FaInfoCircle, FaChevronLeft, FaChevronRight, FaSearch } from 'react-icons/fa';
-import Allanime from './Allanime';
+import AllAnime from './AllAnime';
 
 const AnimePage = () => {
     const animeData = [
@@ -139,7 +139,7 @@ const AnimePage = () => {
 
             {/* All Anime Section */}
             <div ref={allanimeRef}>
-                <Allanime />
+                <AllAnime />
             </div>
         </div>
     );
