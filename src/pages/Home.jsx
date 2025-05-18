@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaPlay, FaInfoCircle, FaChevronLeft, FaChevronRight, FaSearch } from 'react-icons/fa';
-
+import Allanime from './Allanime';
 const AnimePage = () => {
     const animeData = [
         {
@@ -71,13 +71,23 @@ const AnimePage = () => {
                     </div>
                     <h3 className='text-white text-4xl -mt-[10px]'>Manime</h3>
                 </button>
-                <div className="relative">
-                    <input
-                        type="text"
-                        placeholder="Search anime..."
-                        className="bg-[#222] text-white px-4 py-2 rounded-md w-64 pr-10"
-                    />
-                    <FaSearch className="absolute right-3 top-3 text-gray-400" />
+                
+                <div className="flex items-center gap-4">
+                    <button 
+                        onClick={() => window.location.href='/Bookmarks'}
+                        className="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-md"
+                    >
+                        Your Anime
+                    </button>
+                    
+                    <div className="relative">
+                        <input
+                            type="text"
+                            placeholder="Search anime..."
+                            className="bg-[#222] text-white px-4 py-2 rounded-md w-64 pr-10"
+                        />
+                        <FaSearch className="absolute right-3 top-3 text-gray-400" />
+                    </div>
                 </div>
             </nav>
 
@@ -131,6 +141,7 @@ const AnimePage = () => {
                     <FaChevronRight size={20} />
                 </button>
             </div>
+            <Allanime />
         </div>
     );
 };
