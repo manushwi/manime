@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { HeartIcon, ClockIcon } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartIconSolid, ClockIcon as ClockIconSolid } from '@heroicons/react/24/solid';
 import { useBookmarks } from '../context/BookmarksContext';
@@ -6,9 +7,17 @@ const AnimeCard = ({ title, duration, isTrending = false, image }) => {
     const { toggleFavorite, toggleWatchLater, isFavorite, isWatchLater } = useBookmarks();
     const favorite = isFavorite(title);
     const watchLater = isWatchLater(title);
+    const navigate = useNavigate();
+    
+    // Handle card click to navigate to the anime detail page
+    const handleCardClick = () => {
+        // Navigate to the anime detail page based on the title
+        // Space characters in the URL are automatically encoded
+        navigate(`/anime/${title}`);
+    };
     
     return (
-        <div className="group cursor-pointer">
+        <div className="group cursor-pointer" onClick={handleCardClick}>
             {/* Image Container */}
             <div className="relative overflow-hidden rounded-lg aspect-[2/3] bg-gray-800 mb-2">
                 {/* Placeholder image or actual image */}
@@ -22,7 +31,7 @@ const AnimeCard = ({ title, duration, isTrending = false, image }) => {
                 <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button
                         onClick={(e) => {
-                            e.stopPropagation();
+                            e.stopPropagation(); // Prevent navigation when clicking the button
                             toggleFavorite({ title, duration, isTrending, image });
                         }}
                         className="p-1 bg-gray-900/80 rounded-full hover:bg-red-500/80 transition-colors"
@@ -37,7 +46,7 @@ const AnimeCard = ({ title, duration, isTrending = false, image }) => {
                     </button>
                     <button
                         onClick={(e) => {
-                            e.stopPropagation();
+                            e.stopPropagation(); // Prevent navigation when clicking the button
                             toggleWatchLater({ title, duration, isTrending, image });
                         }}
                         className="p-1 bg-gray-900/80 rounded-full hover:bg-yellow-500/80 transition-colors"
