@@ -4,7 +4,7 @@ import AnimeLandingPage from './AnimeLandingPage';
 import Home from './pages/Home';
 import Bookmarks from './pages/Bookmarks';
 import { BookmarksProvider } from './context/BookmarksContext';
-import AllAnime from './pages/Allanime';
+import Allanime from './pages/Allanime';
 import AotDetails from './pages/AotDetails';
 import BerserkDetails from './pages/BerserkDetails';
 import BleachDetails from './pages/BleachDetails';
@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<AnimeLandingPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
-          <Route path="/all-anime" element={<AllAnime />} />
+          <Route path="/all-anime" element={<Allanime />} />
           <Route path="/anime/Attack on Titan" element={<AotDetails />} />
           <Route path="/anime/Berserk" element={<BerserkDetails />} />
           <Route path="/anime/Bleach" element={<BleachDetails />} />
