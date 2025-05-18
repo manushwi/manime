@@ -3,12 +3,11 @@ import React from 'react';
 export default function AotDetails() {
     return (
         <div className="max-w-screen-xl mx-auto bg-white font-sans">
-            {/* Welcome Banner */}
+            
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-1">
                 Attack on Titan
             </div>
 
-            {/* Hero Banner Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../aotBanner.jpg"
@@ -17,13 +16,10 @@ export default function AotDetails() {
                 />
             </div>
 
-
-            {/* Story Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Story
             </div>
 
-            {/* Story Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../aotStory.jpg"
@@ -32,8 +28,6 @@ export default function AotDetails() {
                 />
             </div>
 
-
-            {/* Story Description */}
             <div className="px-4 py-3">
                 <p>Eren Yeager is a boy who lives in the town of Shiganshina, located on the outermost of three circular walls which protect their inhabitants from Titans. In the year 845, the first wall, Wall Maria, is breached by two new types of Titans, the Colossal Titan and the Armored Titan. During the incident, Eren's mother is eaten by a Smiling Titan while Eren escapes. He swears revenge on all Titans and enlists in the military along with his childhood friends Mikasa Ackerman and Armin Arlert.
 
@@ -45,12 +39,10 @@ export default function AotDetails() {
 
             </div>
 
-            {/* Characters Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Characters
             </div>
 
-            {/* Character Gallery */}
             <div className="flex justify-center space-x-2 px-2 mb-4">
                 <img src="../aot1.jpg" alt="Character 1" className="w-24 h-24 object-cover border border-gray-300" />
                 <img src="../aot2.jpg" alt="Character 2" className="w-24 h-24 object-cover border border-gray-300" />

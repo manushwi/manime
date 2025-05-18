@@ -3,7 +3,6 @@ import { createContext, useContext, useState, useEffect } from 'react';
 const BookmarksContext = createContext();
 
 export const BookmarksProvider = ({ children }) => {
-    // Initialize state from localStorage if available
     const [favorites, setFavorites] = useState(() => {
         const savedFavorites = localStorage.getItem('animeFavorites');
         return savedFavorites ? JSON.parse(savedFavorites) : [];
@@ -14,7 +13,6 @@ export const BookmarksProvider = ({ children }) => {
         return savedWatchLater ? JSON.parse(savedWatchLater) : [];
     });
     
-    // Save to localStorage whenever state changes
     useEffect(() => {
         localStorage.setItem('animeFavorites', JSON.stringify(favorites));
     }, [favorites]);
@@ -23,7 +21,6 @@ export const BookmarksProvider = ({ children }) => {
         localStorage.setItem('animeWatchLater', JSON.stringify(watchLater));
     }, [watchLater]);
     
-    // Toggle favorite status for an anime
     const toggleFavorite = (anime) => {
         setFavorites(prev => {
             const exists = prev.find(item => item.title === anime.title);
@@ -34,7 +31,6 @@ export const BookmarksProvider = ({ children }) => {
         });
     };
     
-    // Toggle watch later status for an anime
     const toggleWatchLater = (anime) => {
         setWatchLater(prev => {
             const exists = prev.find(item => item.title === anime.title);
@@ -45,12 +41,10 @@ export const BookmarksProvider = ({ children }) => {
         });
     };
     
-    // Check if an anime is in favorites
     const isFavorite = (title) => {
         return favorites.some(item => item.title === title);
     };
     
-    // Check if an anime is in watch later
     const isWatchLater = (title) => {
         return watchLater.some(item => item.title === title);
     };

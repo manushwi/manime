@@ -3,12 +3,11 @@ import React from 'react';
 export default function NarutoDetails() {
     return (
         <div className="max-w-screen-xl  mx-auto bg-white font-sans">
-            {/* Welcome Banner */}
+
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-1">
                 Naruto
             </div>
 
-            {/* Hero Banner Image */}
             <div className="border-b  border-gray-300 mx-2">
                 <img
                     src="../NBanner.jpg"
@@ -17,13 +16,10 @@ export default function NarutoDetails() {
                 />
             </div>
 
-
-            {/* Story Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Story
             </div>
 
-            {/* Story Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../NStory.webp"
@@ -32,8 +28,6 @@ export default function NarutoDetails() {
                 />
             </div>
 
-
-            {/* Story Description */}
             <div className="px-4 py-3">
                 <p>Two and a half years later, Naruto returns from his training with Jiraiya. The Akatsuki starts kidnapping the hosts of the powerful Tailed Beasts. Team 7 and other Leaf ninja fight against them and search for their teammate Sasuke. The Akatsuki succeeds in capturing and extracting seven of the nine Tailed Beasts, killing all the hosts except Gaara, who is now the Kazekage. Meanwhile, Sasuke betrays Orochimaru and faces Itachi to take revenge. After Itachi dies in battle, Sasuke learns from the Akatsuki founder Tobi that Itachi had been ordered by Konoha's superiors to destroy his clan to prevent a coup; he accepted, on the condition that Sasuke would be spared. Devastated by this revelation, Sasuke joins the Akatsuki to destroy Konoha in revenge. As Konoha ninjas defeat several Akatsuki members, the Akatsuki figurehead leader, Nagato, kills Jiraiya and devastates Konoha, but Naruto defeats and redeems him, earning the village's respect and admiration.
 
@@ -41,12 +35,10 @@ export default function NarutoDetails() {
 
             </div>
 
-            {/* Characters Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Characters
             </div>
 
-            {/* Character Gallery */}
             <div className="flex justify-center space-x-2 px-2 mb-4">
                 <img src="../N1.jpg" alt="Character 1" className="w-24 h-24 object-cover border border-gray-300" />
                 <img src="../N2.png" alt="Character 2" className="w-24 h-24 object-cover border border-gray-300" />

@@ -8,12 +8,10 @@ const Bookmarks = () => {
   
   return (
     <div className="bg-gray-900 min-h-screen p-4 md:p-6 text-white">
-      {/* Header */}
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-white">My Bookmarks</h1>
       </div>
       
-      {/* Tabs */}
       <div className="flex gap-4 mb-6">
         <button
           onClick={() => setActiveTab('Favorites')}
@@ -37,7 +35,6 @@ const Bookmarks = () => {
         </button>
       </div>
       
-      {/* Content */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {activeTab === 'Favorites' ? (
           favorites.length > 0 ? (

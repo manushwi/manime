@@ -39,7 +39,6 @@ function App() {
           <Route path="/anime/Naruto Shippuden" element={<NarutoDetails />} />
           <Route path="/anime/One Piece" element={<OnePieceDetails />} />
           <Route path="/anime/Solo Leveling" element={<SoloLevelingDetails />} />
-          {/* <Route path="/anime/:animeTitle" element={<AnimeLandingPage />} /> */}
         </Routes>
       </Router>
     </BookmarksProvider>

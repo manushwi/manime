@@ -31,7 +31,6 @@ const Allanime = () => {
 
   return (
     <div className="bg-gray-900 min-h-screen p-4 md:p-6 text-white">
-      {/* Trending Section */}
       <SectionHeader title="Trending" />
       
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
@@ -45,7 +44,6 @@ const Allanime = () => {
         ))}
       </div>
       
-      {/* All Anime Section */}
       <SectionHeader title="All Anime" />
       
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">

@@ -3,12 +3,11 @@ import React from 'react';
 export default function DemonSlayerDetails() {
     return (
         <div className="max-w-screen-xl mx-auto bg-white font-sans">
-            {/* Welcome Banner */}
+
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-1">
                 Demon Slayer
             </div>
 
-            {/* Hero Banner Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../DSBanner.jpg"
@@ -17,13 +16,10 @@ export default function DemonSlayerDetails() {
                 />
             </div>
 
-
-            {/* Story Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Story
             </div>
 
-            {/* Story Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../DSStory.jpg"
@@ -32,8 +28,6 @@ export default function DemonSlayerDetails() {
                 />
             </div>
 
-
-            {/* Story Description */}
             <div className="px-4 py-3">
                 <p>Tanjiro Kamado is a kind-hearted and intelligent boy who lives with his family in the mountains. After his father's death, he became his family's breadwinner and travels to the nearby village to sell charcoal. One day, Tanjiro comes home to discover his family was slaughtered by a demon. His sister Nezuko is the sole survivor of the incident; though she has been transformed into a demon, Nezuko still shows signs of human emotion and thought. Following an encounter with Giyu Tomioka, the Water Hashira of the Demon Slayer Corps, Tanjiro is sent to train with Giyu's former instructor Sakonji Urokodaki in becoming a Demon Slayer and begins his quest to help Nezuko turn into a human again.
 
@@ -43,12 +37,10 @@ export default function DemonSlayerDetails() {
 
             </div>
 
-            {/* Characters Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Characters
             </div>
 
-            {/* Character Gallery */}
             <div className="flex justify-center space-x-2 px-2 mb-4">
                 <img src="../DS1.jpg" alt="Character 1" className="w-24 h-24 object-cover border border-gray-300" />
                 <img src="../DS2.jpg" alt="Character 2" className="w-24 h-24 object-cover border border-gray-300" />

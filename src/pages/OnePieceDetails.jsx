@@ -3,12 +3,11 @@ import React from 'react';
 export default function OnePieceDetails() {
     return (
         <div className="max-w-screen-xl mx-auto bg-white font-sans">
-            {/* Welcome Banner */}
+
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-1">
                 One Piece
             </div>
 
-            {/* Hero Banner Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../OPBanner.webp"
@@ -18,12 +17,10 @@ export default function OnePieceDetails() {
             </div>
 
 
-            {/* Story Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Story
             </div>
 
-            {/* Story Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../OPStory.png"
@@ -32,8 +29,6 @@ export default function OnePieceDetails() {
                 />
             </div>
 
-
-            {/* Story Description */}
             <div className="px-4 py-3">
                 <p>The series focuses on Monkey D. Luffy—a young man made of rubber after unintentionally eating the Gum-Gum Fruit—who sets off on a journey from the East Blue Sea to find the deceased King of the Pirates Gol D. Roger's ultimate treasure known as the "One Piece", and take over his prior title. Luffy sets sail as captain of the Straw Hat Pirates,[Jp 15] and is joined by Roronoa Zoro, a swordsman and former bounty hunter; Nami, a money-obsessed thief and navigator; Usopp, a sniper and compulsive liar; and Sanji, an amorous but chivalrous cook. They acquire a ship, the Going Merry[Jp 16]—later replaced by the Thousand Sunny[Jp 17]—and engage in confrontations with notorious pirates. As Luffy and his crew set out on their adventures, others join the crew later in the series, including Tony Tony Chopper, an anthropomorphized reindeer doctor; Nico Robin, an archaeologist and former Baroque Works assassin; Franky, a cyborg shipwright; Brook, a skeleton musician and swordsman; and Jimbei, a whale shark-type fish-man and former member of the Seven Warlords of the Sea who becomes their helmsman. Together, they encounter other pirates, bounty hunters, criminal organizations, revolutionaries, secret agents, scientists, soldiers of the morally ambiguous World Government, and various other friends and foes, as they sail the seas in pursuit of their dreams.
 
@@ -43,12 +38,10 @@ export default function OnePieceDetails() {
 
             </div>
 
-            {/* Characters Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Characters
             </div>
 
-            {/* Character Gallery */}
             <div className="flex justify-center space-x-2 px-2 mb-4">
                 <img src="../OP1.jpg" alt="Character 1" className="w-24 h-24 object-cover border border-gray-300" />
                 <img src="../OP2.jpg" alt="Character 2" className="w-24 h-24 object-cover border border-gray-300" />

@@ -3,12 +3,10 @@ import React from 'react';
 export default function ChainsawManDetails() {
     return (
         <div className="max-w-screen-xl mx-auto bg-white font-sans">
-            {/* Welcome Banner */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-1">
                 Chainsaw Man
             </div>
 
-            {/* Hero Banner Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../chainBanner.png"
@@ -17,13 +15,10 @@ export default function ChainsawManDetails() {
                 />
             </div>
 
-
-            {/* Story Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Story
             </div>
 
-            {/* Story Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../chainStory.webp"
@@ -32,8 +27,6 @@ export default function ChainsawManDetails() {
                 />
             </div>
 
-
-            {/* Story Description */}
             <div className="px-4 py-3">
                 <p>Denji is a teenager trapped in poverty, working off his deceased father's debt to the yakuza by working as a Devil Hunter, aided by Pochita, his canine companion and the Chainsaw Devil. Denji is betrayed by the yakuza, who kill him for a contract with the Zombie Devil. Pochita makes a contract with Denji, merging with him as a Devil-human hybrid, under the condition that Denji live out his modest dreams of living a basic life such as having bread with jam, or falling in love with a woman and being intimate with one. By pulling on a cord in his chest, Denji then becomes Chainsaw Man and massacres the yakuza.
 
@@ -45,12 +38,10 @@ export default function ChainsawManDetails() {
 
             </div>
 
-            {/* Characters Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Characters
             </div>
 
-            {/* Character Gallery */}
             <div className="flex justify-center space-x-2 px-2 mb-4">
                 <img src="../chain1.jpg" alt="Character 1" className="w-24 h-24 object-cover border border-gray-300" />
                 <img src="../chain2.avif" alt="Character 2" className="w-24 h-24 object-cover border border-gray-300" />

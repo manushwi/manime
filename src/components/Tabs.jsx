@@ -13,5 +13,5 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
     </div>
   );
 };
- 
+
 export default Tabs;

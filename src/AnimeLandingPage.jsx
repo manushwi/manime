@@ -148,10 +148,27 @@ function AnimeLandingPage() {
                                 <div
                                     className="flex z-10 gap-4 items-center cursor-pointer"
                                     onClick={() => {
-                                        window.scrollTo({
-                                            top: document.documentElement.scrollHeight / 2,
-                                            behavior: 'smooth',
-                                        });
+                                        const targetPosition = document.documentElement.scrollHeight / 2;
+                                        const startPosition = window.pageYOffset;
+                                        const distance = targetPosition - startPosition;
+                                        const duration = 1200; // 1.2 seconds - smoother than default but not too slow
+                                        let start = null;
+
+                                        function animation(currentTime) {
+                                            if (start === null) start = currentTime;
+                                            const timeElapsed = currentTime - start;
+                                            const progress = Math.min(timeElapsed / duration, 1);
+
+                                            const ease = t => 1 - Math.pow(1 - t, 2);
+
+                                            window.scrollTo(0, startPosition + distance * ease(progress) * 5);
+
+                                            if (timeElapsed < duration) {
+                                                requestAnimationFrame(animation);
+                                            }
+                                        }
+
+                                        requestAnimationFrame(animation);
                                     }}
                                 >
                                     <i className="text-3xl ri-arrow-down-line"></i>
@@ -203,7 +220,7 @@ function AnimeLandingPage() {
                                     minima sit? Explicabo voluptates reiciendis adipisci earum perferendis perspiciatis blanditiis.
                                 </p>
 
-                                <button onClick={() => window.location.href='/home'} className="bg-yellow-500 hover:bg-yellow-600 px-8 py-3 w-full text-black font-bold uppercase tracking-widest text-lg transition-colors duration-300">
+                                <button onClick={() => window.location.href = '/home'} className="bg-yellow-500 hover:bg-yellow-600 px-8 py-3 w-full text-black font-bold uppercase tracking-widest text-lg transition-colors duration-300">
                                     Watch Now
                                 </button>
                             </div>

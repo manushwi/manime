@@ -3,12 +3,11 @@ import React from 'react';
 export default function DragonBallZDetails() {
     return (
         <div className="max-w-screen-xl mx-auto bg-white font-sans">
-            {/* Welcome Banner */}
+
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-1">
                 Dragon Ball Z
             </div>
 
-            {/* Hero Banner Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../DBZBanner.jpg"
@@ -17,13 +16,10 @@ export default function DragonBallZDetails() {
                 />
             </div>
 
-
-            {/* Story Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Story
             </div>
 
-            {/* Story Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../DBZStory.png"
@@ -32,8 +28,6 @@ export default function DragonBallZDetails() {
                 />
             </div>
 
-
-            {/* Story Description */}
             <div className="px-4 py-3">
                 <p>Dragon Ball Z picks up five years after the end of the Dragon Ball series, with Son Goku now a young adult and father to his son, Gohan.
 
@@ -47,12 +41,10 @@ export default function DragonBallZDetails() {
 
             </div>
 
-            {/* Characters Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Characters
             </div>
-
-            {/* Character Gallery */}
+            
             <div className="flex justify-center space-x-2 px-2 mb-4">
                 <img src="../DBZ1.png" alt="Character 1" className="w-24 h-24 object-cover border border-gray-300" />
                 <img src="../DBZ2.jpg" alt="Character 2" className="w-24 h-24 object-cover border border-gray-300" />

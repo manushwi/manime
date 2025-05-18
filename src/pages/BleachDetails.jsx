@@ -3,12 +3,11 @@ import React from 'react';
 export default function BleachDetails() {
     return (
         <div className="max-w-screen-xl mx-auto bg-white font-sans">
-            {/* Welcome Banner */}
+
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-1">
                 Bleach
             </div>
 
-            {/* Hero Banner Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../bleachBanner.jpg"
@@ -17,13 +16,10 @@ export default function BleachDetails() {
                 />
             </div>
 
-
-            {/* Story Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Story
             </div>
 
-            {/* Story Image */}
             <div className="border-b border-gray-300 mx-2">
                 <img
                     src="../bleachStory.webp"
@@ -32,8 +28,6 @@ export default function BleachDetails() {
                 />
             </div>
 
-
-            {/* Story Description */}
             <div className="px-4 py-3">
                 <p>Ichigo Kurosaki is a teenager from Karakura Town who can see ghosts, a talent allowing him to meet Rukia Kuchiki, a Soul Reaper who enters the town in search of a Hollow, a kind of monstrous lost soul who can harm both ghosts and humans. Rukia is one of the Soul Reapers (死神, Shinigami, literally 'Death Gods'), soldiers trusted with ushering the souls of the dead from the World of the Living to the Soul Society (尸魂界ソウル・ソサエティ, Sōru Sosaeti, lit. "Dead Spirit World"), the afterlife realm from which she originates and with fighting Hollows. When she is severely wounded defending Ichigo from a Hollow she pursues, Rukia transfers her powers to Ichigo, so he may fight in her stead while she recovers. Rukia is thereby trapped in an ordinary human body, and she must advise Ichigo as he balances the demands of his Substitute Soul Reaper duties and attending high school. For aid in hunting the Hollows, the pair ally with a trio of other spiritually empowered allies: Ichigo's high school classmate Orihime Inoue, best friend Yasutora "Chad" Sado and Uryū Ishida, a Quincy survior and classmate with the ability to control spiritual particles.
 
@@ -43,12 +37,10 @@ export default function BleachDetails() {
 
             </div>
 
-            {/* Characters Section Header */}
             <div className="bg-red-600 text-white text-center py-1 font-bold text-lg border-2 border-gray-300 mx-2 my-2">
                 Characters
             </div>
 
-            {/* Character Gallery */}
             <div className="flex justify-center space-x-2 px-2 mb-4">
                 <img src="../bleach1.jpg" alt="Character 1" className="w-24 h-24 object-cover border border-gray-300" />
                 <img src="../bleach2.webp" alt="Character 2" className="w-24 h-24 object-cover border border-gray-300" />

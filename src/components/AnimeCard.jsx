@@ -8,30 +8,24 @@ const AnimeCard = ({ title, duration, isTrending = false, image }) => {
     const favorite = isFavorite(title);
     const watchLater = isWatchLater(title);
     const navigate = useNavigate();
-    
-    // Handle card click to navigate to the anime detail page
+
     const handleCardClick = () => {
-        // Navigate to the anime detail page based on the title
-        // Space characters in the URL are automatically encoded
         navigate(`/anime/${title}`);
     };
     
     return (
         <div className="group cursor-pointer" onClick={handleCardClick}>
-            {/* Image Container */}
             <div className="relative overflow-hidden rounded-lg aspect-[2/3] bg-gray-800 mb-2">
-                {/* Placeholder image or actual image */}
                 <img
                     src={image || 'https://via.placeholder.com/300x450'}
                     alt={title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 
-                {/* Action Buttons */}
                 <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button
                         onClick={(e) => {
-                            e.stopPropagation(); // Prevent navigation when clicking the button
+                            e.stopPropagation();
                             toggleFavorite({ title, duration, isTrending, image });
                         }}
                         className="p-1 bg-gray-900/80 rounded-full hover:bg-red-500/80 transition-colors"
@@ -46,7 +40,7 @@ const AnimeCard = ({ title, duration, isTrending = false, image }) => {
                     </button>
                     <button
                         onClick={(e) => {
-                            e.stopPropagation(); // Prevent navigation when clicking the button
+                            e.stopPropagation();
                             toggleWatchLater({ title, duration, isTrending, image });
                         }}
                         className="p-1 bg-gray-900/80 rounded-full hover:bg-yellow-500/80 transition-colors"
@@ -61,14 +55,12 @@ const AnimeCard = ({ title, duration, isTrending = false, image }) => {
                     </button>
                 </div>
                 
-                {/* Duration */}
                 {duration && (
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-2">
                         <p className="text-white text-xs">{duration}</p>
                     </div>
                 )}
                 
-                {/* Trending Badge */}
                 {isTrending && (
                     <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
                         Trending
@@ -76,7 +68,6 @@ const AnimeCard = ({ title, duration, isTrending = false, image }) => {
                 )}
             </div>
             
-            {/* Title */}
             <h3 className="text-white font-medium text-sm line-clamp-2 hover:text-purple-400 transition-colors">
                 {title}
             </h3>
